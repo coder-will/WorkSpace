@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    4.需要一个处理器映射器，HandlerMapping-->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+<!--    5.需要一个处理器适配器，HandlerExecution-->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+<!--    6.需要一个视图解析器viewresolver-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+<!--        前缀-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+<!--                  后缀-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean id="/hello" class="com.zj.controller.HelloController"/>
+
+</beans>

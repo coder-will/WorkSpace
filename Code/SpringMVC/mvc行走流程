@@ -1,0 +1,10 @@
+### springmvc在内部的流程步骤
+    1.DispatcherServlet表示前端控制器，用户发送的所有请求都会经过这里。
+    比如我们发起了一个请求，localhost8080/hello
+    我们发送一个请求到DispatcherServlet之后，DispatcherServlet会根据这个请求去
+    调用HandlerMapping处理器来寻找与我们发送的请求相关的，然后就会调用HandlerExecution
+    如上请求我们就会去找hello相应的控制器，HandlerExecution会把结果返回给DispatcherServlet
+    
+
+    2.
+    3.
