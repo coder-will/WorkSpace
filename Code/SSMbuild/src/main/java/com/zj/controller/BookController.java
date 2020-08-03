@@ -29,4 +29,17 @@ public class BookController {
 
         return "allBook";
     }
+
+    @RequestMapping("/toAddBook")
+    public String toAddPage(){
+        return "addBook";
+    }
+
+    @RequestMapping("/toUpdateBook")
+    public String toUpdateBook(Model model, int id) {
+        Books books = bookServiceImpl.queryBookById(id);
+        System.out.println(books);
+        model.addAttribute("book",books );
+        return "updateBook";
+    }
 }
