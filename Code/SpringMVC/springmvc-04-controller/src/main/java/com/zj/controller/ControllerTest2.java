@@ -19,4 +19,6 @@ public class ControllerTest2 {
         model.addAttribute("msg",name);
         return "hello";
     }
+
+
 }
